@@ -1,6 +1,6 @@
 export default function AboutPage() {
   return (
-    <main>
+    <>
       <h1>About</h1>
       <p>
         This course catalog was built as part of the Advanced Web Technologies
@@ -11,6 +11,6 @@ export default function AboutPage() {
         The data is currently mocked locally in <code>lib/courses.ts</code> and
         will be replaced by a real FastAPI backend in a later lab.
       </p>
-    </main>
+    </>
   );
 }

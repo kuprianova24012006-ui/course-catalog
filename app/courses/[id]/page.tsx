@@ -19,11 +19,11 @@ export default async function CoursePage({
   }
 
   return (
-    <main>
+    <>
       <h1>{course.title}</h1>
       <p>{course.description}</p>
       <p>Credits: {course.credits}</p>
       <p>❤️ {course.likes}</p>
-    </main>
+    </>
   );
 }

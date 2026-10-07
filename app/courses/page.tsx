@@ -5,7 +5,7 @@ export default async function CoursesPage() {
   const courses = await getCourses();
 
   return (
-    <main>
+    <>
       <h1>Courses</h1>
       <ul>
         {courses.map((course) => (
@@ -20,6 +20,6 @@ export default async function CoursesPage() {
           </li>
         ))}
       </ul>
-    </main>
+    </>
   );
 }
