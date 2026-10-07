@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { getCourse, getCourses } from "@/lib/courses";
+import LikeButton from "@/components/LikeButton";
 
 export async function generateStaticParams() {
   const courses = await getCourses();
@@ -23,7 +24,7 @@ export default async function CoursePage({
       <h1>{course.title}</h1>
       <p>{course.description}</p>
       <p>Credits: {course.credits}</p>
-      <p>❤️ {course.likes}</p>
+      <LikeButton initialLikes={course.likes} />
     </>
   );
 }
