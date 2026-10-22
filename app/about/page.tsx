@@ -1,16 +1,18 @@
+
 export default function AboutPage() {
   return (
-    <>
-      <h1>About</h1>
-      <p>
-        This course catalog was built as part of the Advanced Web Technologies
-        course. It showcases a Next.js App Router project with Server and
-        Client Components, dynamic routes, and TypeScript typing.
+    <div className="min-h-screen bg-gray-100 p-8">
+      <h1 className="mb-4 text-3xl font-bold">
+        About This Project
+      </h1>
+
+      <p className="mb-3 text-gray-700">
+        This course catalog was created for the Advanced Web Technologies course.
       </p>
-      <p>
-        The data is currently mocked locally in <code>lib/courses.ts</code> and
-        will be replaced by a real FastAPI backend in a later lab.
+
+      <p className="text-gray-700">
+        It uses Next.js, TypeScript, the App Router, and React Server and Client Components.
       </p>
-    </>
+    </div>
   );
 }
