@@ -41,3 +41,10 @@ To verify the production build, run:
 ```bash
 npm run build
 ```
+
+## Lab 2 — Styling
+
+- Added shadcn/ui Card and Button components.
+- Redesigned course cards with hover effects.
+- Added a responsive course grid for mobile, tablet, and desktop.
+- Styled the shared navigation with spacing and hover states.
