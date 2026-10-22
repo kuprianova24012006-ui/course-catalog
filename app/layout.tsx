@@ -35,6 +35,13 @@ export default function RootLayout({
     Courses
   </Link>
 
+<Link
+  href="/filter"
+  className="rounded-md px-3 py-2 hover:bg-slate-100 hover:text-blue-600"
+>
+  Filter
+</Link>
+
   <Link
     href="/about"
     className="rounded-md px-3 py-2 hover:bg-slate-100 hover:text-blue-600"
