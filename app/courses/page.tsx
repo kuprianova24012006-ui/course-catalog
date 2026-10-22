@@ -5,21 +5,23 @@ export default async function CoursesPage() {
   const courses = await getCourses();
 
   return (
-    <>
-      <h1>Courses</h1>
-      <ul>
+    <div className="min-h-screen bg-gray-100 p-8">
+      <h1 className="mb-6 text-3xl font-bold text-gray-900">
+        Available Courses
+      </h1>
+
+      <div className="grid gap-4 sm:grid-cols-2">
         {courses.map((course) => (
-          <li key={course.id}>
-            <CourseCard
-              id={course.id}
-              title={course.title}
-              description={course.description}
-              credits={course.credits}
-              likes={course.likes}
-            />
-          </li>
+          <CourseCard
+            key={course.id}
+            id={course.id}
+            title={course.title}
+            description={course.description}
+            credits={course.credits}
+            likes={course.likes}
+          />
         ))}
-      </ul>
-    </>
+      </div>
+    </div>
   );
 }

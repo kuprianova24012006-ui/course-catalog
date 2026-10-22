@@ -1,3 +1,4 @@
+
 export type Course = {
   id: string;
   title: string;
@@ -43,7 +44,7 @@ const courses: Course[] = [
   {
     id: "web-security",
     title: "Web Security Essentials",
-    description: "JWT/OAuth2, defending against XSS, CSRF, SQL injection.",
+    description: "JWT/OAuth2, XSS, CSRF, and SQL injection.",
     credits: 4,
     isElective: false,
     likes: 21,
@@ -51,7 +52,7 @@ const courses: Course[] = [
   {
     id: "ai-integration",
     title: "AI/LLM Integration",
-    description: "LLM features in an app, wired up via the OpenAI API.",
+    description: "LLM features in an app via the OpenAI API.",
     credits: 5,
     isElective: true,
     likes: 32,
@@ -59,13 +60,17 @@ const courses: Course[] = [
 ];
 
 function delay<T>(value: T, ms = 300): Promise<T> {
-  return new Promise((resolve) => setTimeout(() => resolve(value), ms));
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(value), ms);
+  });
 }
 
 export async function getCourses(): Promise<Course[]> {
   return delay(courses);
 }
 
-export async function getCourse(id: string): Promise<Course | undefined> {
-  return delay(courses.find((c) => c.id === id));
+export async function getCourse(
+  id: string
+): Promise<Course | undefined> {
+  return delay(courses.find((course) => course.id === id));
 }
